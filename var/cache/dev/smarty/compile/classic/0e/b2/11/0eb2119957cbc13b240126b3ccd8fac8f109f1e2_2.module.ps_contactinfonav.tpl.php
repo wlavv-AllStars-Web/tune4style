@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-09-22 10:46:37
+/* Smarty version 4.3.1, created on 2023-09-22 11:35:05
   from 'module:ps_contactinfonav.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_650d627d12b0c0_62389071',
+  'unifunc' => 'content_650d6dd9c55038_91465661',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0eb2119957cbc13b240126b3ccd8fac8f109f1e2' => 
     array (
       0 => 'module:ps_contactinfonav.tpl',
-      1 => 1678742294,
+      1 => 1695376618,
       2 => 'module',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_650d627d12b0c0_62389071 (Smarty_Internal_Template $_smarty_tpl) {
+function content_650d6dd9c55038_91465661 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\tune4style\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.replace.php','function'=>'smarty_modifier_replace',),));
 ?>
 <!-- begin C:\xampp\htdocs\tune4style/themes/classic/modules/ps_contactinfo/nav.tpl --><div id="_desktop_contact_link">

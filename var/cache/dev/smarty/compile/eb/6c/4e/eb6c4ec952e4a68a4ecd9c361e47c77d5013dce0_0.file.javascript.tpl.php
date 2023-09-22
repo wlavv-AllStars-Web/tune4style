@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-09-22 10:45:57
+/* Smarty version 4.3.1, created on 2023-09-22 11:35:48
   from 'C:\xampp\htdocs\tune4style\themes\javascript.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_650d6255ac9d96_52842093',
+  'unifunc' => 'content_650d6e045e5c43_94503326',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eb6c4ec952e4a68a4ecd9c361e47c77d5013dce0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tune4style\\themes\\javascript.tpl',
-      1 => 1689838702,
+      1 => 1695376618,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_650d6255ac9d96_52842093 (Smarty_Internal_Template $_smarty_tpl) {
+function content_650d6e045e5c43_94503326 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\tune4style\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 if ((isset($_smarty_tpl->tpl_vars['js_def']->value)) && is_array($_smarty_tpl->tpl_vars['js_def']->value) && smarty_modifier_count($_smarty_tpl->tpl_vars['js_def']->value)) {
 echo '<script'; ?>

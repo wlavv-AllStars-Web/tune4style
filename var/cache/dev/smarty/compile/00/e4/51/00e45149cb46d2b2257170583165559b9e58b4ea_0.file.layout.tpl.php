@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-09-22 10:46:16
+/* Smarty version 4.3.1, created on 2023-09-22 11:36:12
   from 'C:\xampp\htdocs\tune4style\admin3355\themes\default\template\layout.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_650d6268aae9d6_48629140',
+  'unifunc' => 'content_650d6e1c8617a9_28399237',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '00e45149cb46d2b2257170583165559b9e58b4ea' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tune4style\\admin3355\\themes\\default\\template\\layout.tpl',
-      1 => 1689838702,
+      1 => 1695376605,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_650d6268aae9d6_48629140 (Smarty_Internal_Template $_smarty_tpl) {
+function content_650d6e1c8617a9_28399237 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\tune4style\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 echo $_smarty_tpl->tpl_vars['header']->value;?>
 

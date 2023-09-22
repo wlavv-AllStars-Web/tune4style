@@ -1,14 +1,2 @@
-85c895,192.168.1.68,POST,http://192.168.1.68:84/admin3355/index.php/common/notifications?_token=QHAdB8dzKbpjvE-2pab9p5MRKJZ4yPScGqTB6n_GVuQ&rand=1695375976864,1695375977,,200
-fa0627,192.168.1.68,POST,http://192.168.1.68:84/admin3355/index.php/common/notifications?_token=QHAdB8dzKbpjvE-2pab9p5MRKJZ4yPScGqTB6n_GVuQ&rand=1695375976882,1695375977,,200
-8e740d,192.168.1.68,GET,http://192.168.1.68:84/admin3355/index.php/improve/modules/manage?_token=QHAdB8dzKbpjvE-2pab9p5MRKJZ4yPScGqTB6n_GVuQ,1695375985,,200
-c18c5b,192.168.1.68,GET,http://192.168.1.68:84/admin3355/index.php/improve/modules/alerts/count?_token=QHAdB8dzKbpjvE-2pab9p5MRKJZ4yPScGqTB6n_GVuQ,1695375986,,200
-31d552,192.168.1.68,POST,http://192.168.1.68:84/admin3355/index.php/common/notifications?_token=QHAdB8dzKbpjvE-2pab9p5MRKJZ4yPScGqTB6n_GVuQ,1695375986,,200
-a70c47,192.168.1.68,POST,http://192.168.1.68:84/admin3355/index.php/common/notifications?_token=QHAdB8dzKbpjvE-2pab9p5MRKJZ4yPScGqTB6n_GVuQ&rand=1695375985491,1695375987,,200
-2730ef,192.168.1.68,POST,http://192.168.1.68:84/admin3355/index.php/common/notifications?_token=QHAdB8dzKbpjvE-2pab9p5MRKJZ4yPScGqTB6n_GVuQ&rand=1695376106653,1695376107,,200
-2ecb89,192.168.1.68,POST,http://192.168.1.68:84/admin3355/index.php/common/notifications?_token=QHAdB8dzKbpjvE-2pab9p5MRKJZ4yPScGqTB6n_GVuQ&rand=1695376106672,1695376107,,200
-1c0b7d,192.168.1.68,POST,http://192.168.1.68:84/admin3355/index.php/common/notifications?_token=QHAdB8dzKbpjvE-2pab9p5MRKJZ4yPScGqTB6n_GVuQ,1695376107,,200
-6c1eea,192.168.1.68,POST,http://192.168.1.68:84/admin3355/index.php/common/notifications?_token=QHAdB8dzKbpjvE-2pab9p5MRKJZ4yPScGqTB6n_GVuQ&rand=1695376108048,1695376108,,200
-c966f2,192.168.1.68,POST,http://192.168.1.68:84/admin3355/index.php/common/notifications?_token=QHAdB8dzKbpjvE-2pab9p5MRKJZ4yPScGqTB6n_GVuQ,1695376228,,200
-86d238,192.168.1.68,POST,http://192.168.1.68:84/admin3355/index.php/common/notifications?_token=QHAdB8dzKbpjvE-2pab9p5MRKJZ4yPScGqTB6n_GVuQ&rand=1695376227840,1695376228,,200
-0c5d69,192.168.1.68,POST,http://192.168.1.68:84/admin3355/index.php/common/notifications?_token=QHAdB8dzKbpjvE-2pab9p5MRKJZ4yPScGqTB6n_GVuQ&rand=1695376228850,1695376229,,200
-69a3e5,192.168.1.68,POST,http://192.168.1.68:84/admin3355/index.php/common/notifications?_token=QHAdB8dzKbpjvE-2pab9p5MRKJZ4yPScGqTB6n_GVuQ&rand=1695376229479,1695376229,,200
+4655c8,192.168.1.64,POST,http://192.168.1.64:82/admin3355/index.php/common/notifications?_token=6sGcjd-y7-sGth8HxN-9YupdVNpNOTE48VBdzMTu26c&rand=1695378973335,1695378975,,200
+b2bbfa,192.168.1.64,POST,http://192.168.1.64:82/admin3355/index.php/common/notifications?_token=6sGcjd-y7-sGth8HxN-9YupdVNpNOTE48VBdzMTu26c&rand=1695378973438,1695378976,,200

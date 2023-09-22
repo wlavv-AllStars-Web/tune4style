@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-09-22 10:46:37
+/* Smarty version 4.3.1, created on 2023-09-22 11:35:06
   from 'module:ps_socialfollowps_socialfollow.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_650d627d6b09b3_05549915',
+  'unifunc' => 'content_650d6dda8187f5_25735324',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '80ac9ddb06fe7b43ffdd2f5cd1185536480d2577' => 
     array (
       0 => 'module:ps_socialfollowps_socialfollow.tpl',
-      1 => 1678742294,
+      1 => 1695376618,
       2 => 'module',
     ),
   ),
@@ -20,24 +20,24 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_650d627d6b09b3_05549915 (Smarty_Internal_Template $_smarty_tpl) {
+function content_650d6dda8187f5_25735324 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
-$_smarty_tpl->compiled->nocache_hash = '201283461650d627d6aec69_28388424';
+$_smarty_tpl->compiled->nocache_hash = '817252635650d6dda815e69_10616515';
 ?>
 <!-- begin C:\xampp\htdocs\tune4style/themes/classic/modules/ps_socialfollow/ps_socialfollow.tpl -->
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_718929948650d627d6af3e3_36827667', 'block_social');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1474674010650d6dda816842_15960402', 'block_social');
 ?>
 
 <!-- end C:\xampp\htdocs\tune4style/themes/classic/modules/ps_socialfollow/ps_socialfollow.tpl --><?php }
 /* {block 'block_social'} */
-class Block_718929948650d627d6af3e3_36827667 extends Smarty_Internal_Block
+class Block_1474674010650d6dda816842_15960402 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'block_social' => 
   array (
-    0 => 'Block_718929948650d627d6af3e3_36827667',
+    0 => 'Block_1474674010650d6dda816842_15960402',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

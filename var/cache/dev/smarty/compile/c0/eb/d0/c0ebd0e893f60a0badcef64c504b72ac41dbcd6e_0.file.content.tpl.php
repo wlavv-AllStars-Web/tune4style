@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-09-22 10:45:57
+/* Smarty version 4.3.1, created on 2023-09-22 11:35:47
   from 'C:\xampp\htdocs\tune4style\admin3355\themes\default\template\controllers\login\content.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_650d62555ba4b3_49324943',
+  'unifunc' => 'content_650d6e03b1e2c7_79972759',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c0ebd0e893f60a0badcef64c504b72ac41dbcd6e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tune4style\\admin3355\\themes\\default\\template\\controllers\\login\\content.tpl',
-      1 => 1689838702,
+      1 => 1695376605,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_650d62555ba4b3_49324943 (Smarty_Internal_Template $_smarty_tpl) {
+function content_650d6e03b1e2c7_79972759 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\tune4style\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
 ?>
 <div id="login-panel">

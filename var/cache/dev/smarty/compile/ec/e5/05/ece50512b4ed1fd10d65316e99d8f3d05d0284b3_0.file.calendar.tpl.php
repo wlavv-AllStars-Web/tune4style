@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-09-22 10:46:15
+/* Smarty version 4.3.1, created on 2023-09-22 11:36:10
   from 'C:\xampp\htdocs\tune4style\admin3355\themes\default\template\helpers\calendar\calendar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_650d6267d12ab0_71087389',
+  'unifunc' => 'content_650d6e1acc1711_05531000',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ece50512b4ed1fd10d65316e99d8f3d05d0284b3' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tune4style\\admin3355\\themes\\default\\template\\helpers\\calendar\\calendar.tpl',
-      1 => 1689838702,
+      1 => 1695376605,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_650d6267d12ab0_71087389 (Smarty_Internal_Template $_smarty_tpl) {
+function content_650d6e1acc1711_05531000 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\tune4style\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <div id="datepicker" class="row row-padding-top hide">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-09-22 10:45:57
+/* Smarty version 4.3.1, created on 2023-09-22 11:35:48
   from 'C:\xampp\htdocs\tune4style\admin3355\themes\default\template\error.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_650d6255b9dd92_97734084',
+  'unifunc' => 'content_650d6e0477d085_31968679',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '78dfe6c9db73aae2adead2c6a3ce569ac615c616' => 
     array (
       0 => 'C:\\xampp\\htdocs\\tune4style\\admin3355\\themes\\default\\template\\error.tpl',
-      1 => 1689838702,
+      1 => 1695376605,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_650d6255b9dd92_97734084 (Smarty_Internal_Template $_smarty_tpl) {
+function content_650d6e0477d085_31968679 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\tune4style\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 if ((isset($_smarty_tpl->tpl_vars['php_errors']->value)) && smarty_modifier_count($_smarty_tpl->tpl_vars['php_errors']->value)) {?>
 <div class="bootstrap">
