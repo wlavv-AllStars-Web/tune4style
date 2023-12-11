@@ -2,15 +2,15 @@
 
 {shop_url}
 
-Olá,
+Hi,
 
-O produto {product} está quase esgotado.
+{product} is almost out of stock.
 
-Existem menos de {last_qty} items em stock.
+There are now less than {last_qty} items in stock.
 
-Quantidade restante: {qty}
+Remaining stock: {qty}
 
-Reabasteça o seu inventário, vá à secção Catálogo > Stocks na Área de Administração para gerir o seu stock.
+Replenish your inventory, go to the Catalog > Stocks section of your back office to manage your stock.
 
 [{shop_name}]({shop_url})
 

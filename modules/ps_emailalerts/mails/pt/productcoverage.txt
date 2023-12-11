@@ -2,11 +2,11 @@
 
 {shop_url}
 
-Olá,
+Hi,
 
-O stock está abaixo do valor mínimo especificado de: {warning_coverage}
+Your stock cover is now less than the specified minimum of: {warning_coverage}
 
-Em stock: {current_coverage}
+Current stock cover: {current_coverage}
 
 [{shop_name}]({shop_url})
 

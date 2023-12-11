@@ -2,27 +2,27 @@
 
 {shop_url}
 
-Olá,
+Hi,
 
-Recebeu um novo pedido de devolução para {shop_name}.
+You have received a new return request for {shop_name}.
 
-Detalhes de devolução
+Return Details
 
-Encomenda: {order_name} Realizada a {date}
+Order: {order_name} Placed on {date}
 
-Cliente: {firstname} {lastname}, ({email})
+Customer: {firstname} {lastname}, ({email})
 
-Referência	Produto	Quantidade   {items}
+Reference	Product	Quantity   {items}
 
-Endereço de entrega
+Delivery address
 
 {delivery_block_html}
 
-Endereço de faturação
+Billing address
 
 {invoice_block_html}
 
-Mensagem do cliente:
+Customer message:
 
 {message}
 

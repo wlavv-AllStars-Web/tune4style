@@ -2,9 +2,9 @@
 
 {shop_url}
 
-Olá,
+Hi,
 
-Obrigado por subscrever à nossa newsletter. Por favor clique no link seguinte para confirmar o pedido:
+Thank you for subscribing to our newsletter. Please click on the following link to confirm your request:
 {verif_url}
 
 [{shop_name}]({shop_url})

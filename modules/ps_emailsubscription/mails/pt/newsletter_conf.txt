@@ -2,9 +2,9 @@
 
 {shop_url}
 
-Olá,
+Hi,
 
-Obrigado por subscrever a nossa newsletter.
+Thank you for subscribing to our newsletter.
 
 [{shop_name}]({shop_url})
 
