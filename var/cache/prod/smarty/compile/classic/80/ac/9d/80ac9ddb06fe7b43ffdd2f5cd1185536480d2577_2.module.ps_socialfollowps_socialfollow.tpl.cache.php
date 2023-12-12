@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-12-11 16:31:43
+/* Smarty version 4.3.1, created on 2023-12-12 10:13:50
   from 'module:ps_socialfollowps_socialfollow.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_6577396f632529_59896583',
+  'unifunc' => 'content_6578325eb112d6_70518567',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,24 +20,24 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6577396f632529_59896583 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6578325eb112d6_70518567 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
-$_smarty_tpl->compiled->nocache_hash = '8813775316577396f631212_09228672';
+$_smarty_tpl->compiled->nocache_hash = '6705946286578325eb0fec0_10770223';
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4721604086577396f6315e5_77620636', 'block_social');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6703991756578325eb102d4_15212772', 'block_social');
 ?>
 
 <?php }
 /* {block 'block_social'} */
-class Block_4721604086577396f6315e5_77620636 extends Smarty_Internal_Block
+class Block_6703991756578325eb102d4_15212772 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'block_social' => 
   array (
-    0 => 'Block_4721604086577396f6315e5_77620636',
+    0 => 'Block_6703991756578325eb102d4_15212772',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

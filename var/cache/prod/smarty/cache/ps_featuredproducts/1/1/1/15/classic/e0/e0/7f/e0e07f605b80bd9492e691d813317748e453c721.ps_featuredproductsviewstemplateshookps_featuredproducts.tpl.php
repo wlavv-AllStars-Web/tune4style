@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-12-11 16:31:43
+/* Smarty version 4.3.1, created on 2023-12-12 10:13:50
   from 'module:ps_featuredproductsviewstemplateshookps_featuredproducts.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_6577396f566c78_99006226',
+  'unifunc' => 'content_6578325ea802a7_89059593',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -36,7 +36,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 31536000,
 ),true)) {
-function content_6577396f566c78_99006226 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6578325ea802a7_89059593 (Smarty_Internal_Template $_smarty_tpl) {
 ?><section class="featured-products clearfix">
   <h2 class="h2 products-section-title text-uppercase">
     Popular Products
@@ -50,7 +50,7 @@ function content_6577396f566c78_99006226 (Smarty_Internal_Template $_smarty_tpl)
     <div class="thumbnail-container">
       <div class="thumbnail-top">
         
-                      <a href="http://tune4style.local/en/inicio/2-2-racequip-chevron-130-series-suit.html#" class="thumbnail product-thumbnail">
+                      <a href="http://tune4style.local/en/inicio/2-2-racequip-chevron-130-series-suit.html#/1-color-black/6-size-m" class="thumbnail product-thumbnail">
               <picture>
                                                 <img
                   src="http://tune4style.local/img/p/en-default-home_default.jpg"
@@ -76,7 +76,7 @@ function content_6577396f566c78_99006226 (Smarty_Internal_Template $_smarty_tpl)
 
       <div class="product-description">
         
-                      <h3 class="h3 product-title"><a href="http://tune4style.local/en/inicio/2-2-racequip-chevron-130-series-suit.html#" content="http://tune4style.local/en/inicio/2-2-racequip-chevron-130-series-suit.html#">RaceQuip Chevron 130 series...</a></h3>
+                      <h3 class="h3 product-title"><a href="http://tune4style.local/en/inicio/2-2-racequip-chevron-130-series-suit.html#/1-color-black/6-size-m" content="http://tune4style.local/en/inicio/2-2-racequip-chevron-130-series-suit.html#/1-color-black/6-size-m">RaceQuip Chevron 130 series...</a></h3>
                   
 
         
@@ -119,7 +119,7 @@ function content_6577396f566c78_99006226 (Smarty_Internal_Template $_smarty_tpl)
     <div class="thumbnail-container">
       <div class="thumbnail-top">
         
-                      <a href="http://tune4style.local/en/inicio/6-41-racequip-driver-suit-pants.html#" class="thumbnail product-thumbnail">
+                      <a href="http://tune4style.local/en/inicio/6-41-racequip-driver-suit-pants.html#/5-size-s" class="thumbnail product-thumbnail">
               <picture>
                                                 <img
                   src="http://tune4style.local/img/p/en-default-home_default.jpg"
@@ -145,7 +145,7 @@ function content_6577396f566c78_99006226 (Smarty_Internal_Template $_smarty_tpl)
 
       <div class="product-description">
         
-                      <h3 class="h3 product-title"><a href="http://tune4style.local/en/inicio/6-41-racequip-driver-suit-pants.html#" content="http://tune4style.local/en/inicio/6-41-racequip-driver-suit-pants.html#">RaceQuip Driver Suit Pants</a></h3>
+                      <h3 class="h3 product-title"><a href="http://tune4style.local/en/inicio/6-41-racequip-driver-suit-pants.html#/5-size-s" content="http://tune4style.local/en/inicio/6-41-racequip-driver-suit-pants.html#/5-size-s">RaceQuip Driver Suit Pants</a></h3>
                   
 
         
@@ -188,7 +188,7 @@ function content_6577396f566c78_99006226 (Smarty_Internal_Template $_smarty_tpl)
     <div class="thumbnail-container">
       <div class="thumbnail-top">
         
-                      <a href="http://tune4style.local/en/inicio/7-47-racequip-driver-suit-pants.html#" class="thumbnail product-thumbnail">
+                      <a href="http://tune4style.local/en/inicio/7-47-racequip-driver-suit-pants.html#/5-size-s" class="thumbnail product-thumbnail">
               <picture>
                                                 <img
                   src="http://tune4style.local/img/p/en-default-home_default.jpg"
@@ -214,7 +214,7 @@ function content_6577396f566c78_99006226 (Smarty_Internal_Template $_smarty_tpl)
 
       <div class="product-description">
         
-                      <h3 class="h3 product-title"><a href="http://tune4style.local/en/inicio/7-47-racequip-driver-suit-pants.html#" content="http://tune4style.local/en/inicio/7-47-racequip-driver-suit-pants.html#">RaceQuip Pilot Jacket</a></h3>
+                      <h3 class="h3 product-title"><a href="http://tune4style.local/en/inicio/7-47-racequip-driver-suit-pants.html#/5-size-s" content="http://tune4style.local/en/inicio/7-47-racequip-driver-suit-pants.html#/5-size-s">RaceQuip Pilot Jacket</a></h3>
                   
 
         
@@ -326,7 +326,7 @@ function content_6577396f566c78_99006226 (Smarty_Internal_Template $_smarty_tpl)
     <div class="thumbnail-container">
       <div class="thumbnail-top">
         
-                      <a href="http://tune4style.local/en/inicio/9-53-racequip-driver-suit-pants.html#" class="thumbnail product-thumbnail">
+                      <a href="http://tune4style.local/en/inicio/9-53-racequip-driver-suit-pants.html#/5-size-s" class="thumbnail product-thumbnail">
               <picture>
                                                 <img
                   src="http://tune4style.local/img/p/en-default-home_default.jpg"
@@ -352,7 +352,7 @@ function content_6577396f566c78_99006226 (Smarty_Internal_Template $_smarty_tpl)
 
       <div class="product-description">
         
-                      <h3 class="h3 product-title"><a href="http://tune4style.local/en/inicio/9-53-racequip-driver-suit-pants.html#" content="http://tune4style.local/en/inicio/9-53-racequip-driver-suit-pants.html#">RaceQuip OF20 Open Face Helmet</a></h3>
+                      <h3 class="h3 product-title"><a href="http://tune4style.local/en/inicio/9-53-racequip-driver-suit-pants.html#/5-size-s" content="http://tune4style.local/en/inicio/9-53-racequip-driver-suit-pants.html#/5-size-s">RaceQuip OF20 Open Face Helmet</a></h3>
                   
 
         
@@ -464,7 +464,7 @@ function content_6577396f566c78_99006226 (Smarty_Internal_Template $_smarty_tpl)
     <div class="thumbnail-container">
       <div class="thumbnail-top">
         
-                      <a href="http://tune4style.local/en/pilot-equipment/11-59-racequip-driver-suit-pants.html#" class="thumbnail product-thumbnail">
+                      <a href="http://tune4style.local/en/pilot-equipment/11-59-racequip-driver-suit-pants.html#/5-size-s" class="thumbnail product-thumbnail">
               <picture>
                                                 <img
                   src="http://tune4style.local/img/p/en-default-home_default.jpg"
@@ -490,7 +490,7 @@ function content_6577396f566c78_99006226 (Smarty_Internal_Template $_smarty_tpl)
 
       <div class="product-description">
         
-                      <h3 class="h3 product-title"><a href="http://tune4style.local/en/pilot-equipment/11-59-racequip-driver-suit-pants.html#" content="http://tune4style.local/en/pilot-equipment/11-59-racequip-driver-suit-pants.html#">RACEQUIP 351 SERIES NOMEX...</a></h3>
+                      <h3 class="h3 product-title"><a href="http://tune4style.local/en/pilot-equipment/11-59-racequip-driver-suit-pants.html#/5-size-s" content="http://tune4style.local/en/pilot-equipment/11-59-racequip-driver-suit-pants.html#/5-size-s">RACEQUIP 351 SERIES NOMEX...</a></h3>
                   
 
         
@@ -533,7 +533,7 @@ function content_6577396f566c78_99006226 (Smarty_Internal_Template $_smarty_tpl)
     <div class="thumbnail-container">
       <div class="thumbnail-top">
         
-                      <a href="http://tune4style.local/en/inicio/12-64-racequip-driver-suit-pants.html#" class="thumbnail product-thumbnail">
+                      <a href="http://tune4style.local/en/inicio/12-64-racequip-driver-suit-pants.html#/5-size-s" class="thumbnail product-thumbnail">
               <picture>
                                                 <img
                   src="http://tune4style.local/img/p/en-default-home_default.jpg"
@@ -559,7 +559,7 @@ function content_6577396f566c78_99006226 (Smarty_Internal_Template $_smarty_tpl)
 
       <div class="product-description">
         
-                      <h3 class="h3 product-title"><a href="http://tune4style.local/en/inicio/12-64-racequip-driver-suit-pants.html#" content="http://tune4style.local/en/inicio/12-64-racequip-driver-suit-pants.html#">RaceQuip PRO20 Helmet - PINK</a></h3>
+                      <h3 class="h3 product-title"><a href="http://tune4style.local/en/inicio/12-64-racequip-driver-suit-pants.html#/5-size-s" content="http://tune4style.local/en/inicio/12-64-racequip-driver-suit-pants.html#/5-size-s">RaceQuip PRO20 Helmet - PINK</a></h3>
                   
 
         
