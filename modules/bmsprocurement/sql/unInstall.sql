@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS `ps_bms_procurement_currency`;
+DROP TABLE IF EXISTS `ps_bms_procurement_payment_method`;
+DROP TABLE IF EXISTS `ps_bms_procurement_payment_status`;
+DROP TABLE IF EXISTS `ps_bms_procurement_payment_term`;
+DROP TABLE IF EXISTS `ps_bms_procurement_product`;
+DROP TABLE IF EXISTS `ps_bms_procurement_purchase_order`;
+DROP TABLE IF EXISTS `ps_bms_procurement_purchase_order_payment_status`;
+DROP TABLE IF EXISTS `ps_bms_procurement_purchase_order_product`;
+DROP TABLE IF EXISTS `ps_bms_procurement_purchase_order_reception`;
+DROP TABLE IF EXISTS `ps_bms_procurement_purchase_order_reception_product`;
+DROP TABLE IF EXISTS `ps_bms_procurement_purchase_order_status`;
+DROP TABLE IF EXISTS `ps_bms_procurement_supplier`;
+DROP TABLE IF EXISTS `ps_bms_procurement_supplier_contact`;
+DROP TABLE IF EXISTS `ps_bms_procurement_date`;
+DROP TABLE IF EXISTS `ps_bms_procurement_storage`;

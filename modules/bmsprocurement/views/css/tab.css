@@ -1,0 +1,5 @@
+.bootstrap .table td.right, .bootstrap .table th.right {
+	text-align: right;
+}
+
+.icon-AdminProcurementHome:before, .icon-AdminProcurementHome:before { content: "\f16b"; }
