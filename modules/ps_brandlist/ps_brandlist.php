@@ -38,7 +38,7 @@ class Ps_Brandlist extends Module implements WidgetInterface
     {
         $this->name = 'ps_brandlist';
         $this->tab = 'front_office_features';
-        $this->version = '1.0.3';
+        $this->version = '1.0.5';
         $this->author = 'PrestaShop';
         $this->need_instance = 0;
 
@@ -280,7 +280,7 @@ class Ps_Brandlist extends Module implements WidgetInterface
             $n = false,
             $allGroup = false,
             $group_by = false,
-            $withProduct = true
+            $withProduct = false
         );
 
         if (!empty($brands)) {
