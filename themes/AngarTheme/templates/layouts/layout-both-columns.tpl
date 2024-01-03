@@ -85,8 +85,9 @@
 				{include file='_partials/breadcrumb.tpl'}
 			  {/block}
 			  {/if}
-
-			  {block name="left_column"}
+        
+      {if $page.page_name != 'index'}
+	        {block name="left_column"}
 				<div id="left-column" class="columns col-xs-12 col-sm-4 col-md-3">
 				  {* AngarThemes *}
 				  {hook h="displayLeftColumn"}
@@ -96,6 +97,7 @@
 				  {/if}
 				</div>
 			  {/block}
+      {/if}
 
 			  {block name="content_wrapper"}
 				<div id="content-wrapper" class="left-column right-column col-sm-4 col-md-6">
