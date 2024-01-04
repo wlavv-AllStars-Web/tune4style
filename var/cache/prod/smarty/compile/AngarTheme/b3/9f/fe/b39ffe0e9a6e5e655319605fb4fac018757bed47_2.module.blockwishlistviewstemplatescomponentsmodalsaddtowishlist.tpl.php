@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-01-04 16:37:43
+/* Smarty version 4.3.4, created on 2024-01-04 16:58:36
   from 'module:blockwishlistviewstemplatescomponentsmodalsaddtowishlist.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_6596ded7a2a8f1_20598441',
+  'unifunc' => 'content_6596e3bc30d173_50702869',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6596ded7a2a8f1_20598441 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6596e3bc30d173_50702869 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div
   class="wishlist-add-to"

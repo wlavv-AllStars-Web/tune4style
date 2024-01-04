@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-01-04 16:37:43
+/* Smarty version 4.3.4, created on 2024-01-04 16:58:36
   from '/opt/lampp/htdocs/tune4style/modules/angarthemeconfigurator/views/templates/front/angarthemeconfigurator.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_6596ded7abf769_22869213',
+  'unifunc' => 'content_6596e3bc3984d5_60104173',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6596ded7abf769_22869213 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6596e3bc3984d5_60104173 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['enableconfig']->value == 1) {?>
 
 <div id="theme_customization_icon">

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-01-04 16:37:43
+/* Smarty version 4.3.4, created on 2024-01-04 16:58:36
   from '/opt/lampp/htdocs/tune4style/themes/AngarTheme/templates/_partials/password-policy-template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_6596ded7acde75_85619270',
+  'unifunc' => 'content_6596e3bc3a81b4_56338201',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6596ded7acde75_85619270 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6596e3bc3a81b4_56338201 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <template id="password-feedback">

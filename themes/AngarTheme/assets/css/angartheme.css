@@ -5613,6 +5613,9 @@ background: #111;
 }
 .footer-container {
   padding-bottom: 6px;
+  background: #000;
+  border-top: 1px solid #2d2d2d;
+  border-bottom: 1px solid #2d2d2d!important;
 }
 .iconees {
   color:#ffffff;
