@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-01-04 15:28:14
+/* Smarty version 4.3.4, created on 2024-01-04 16:37:43
   from '/opt/lampp/htdocs/tune4style/modules/angarthemeconfigurator/views/templates/front/csstpl.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_6596ce8e3ba415_72041949',
+  'unifunc' => 'content_6596ded7881fe8_89509129',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6596ce8e3ba415_72041949 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6596ded7881fe8_89509129 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/tune4style/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 ?>
 

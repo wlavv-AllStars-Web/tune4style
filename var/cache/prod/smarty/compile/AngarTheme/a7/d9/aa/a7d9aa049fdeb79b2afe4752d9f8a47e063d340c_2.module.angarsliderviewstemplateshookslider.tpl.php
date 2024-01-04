@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-01-04 15:28:14
+/* Smarty version 4.3.4, created on 2024-01-04 16:37:43
   from 'module:angarsliderviewstemplateshookslider.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_6596ce8e4988e8_54049997',
+  'unifunc' => 'content_6596ded79af327_59157416',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6596ce8e4988e8_54049997 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6596ded79af327_59157416 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- Module AngarSlider -->
 <?php if ($_smarty_tpl->tpl_vars['angarslider']->value['slides']) {?>
