@@ -28,6 +28,9 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
             'shortName' => [
                 'FeatureFlag',
             ],
+            'description' => [
+                '',
+            ],
             'uriVariables' => [
                 [
                     'id' => $o[10],
@@ -101,6 +104,18 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
                 'PrestaShopBundle\\Entity\\FeatureFlag',
                 'PrestaShopBundle\\Entity\\FeatureFlag',
                 'PrestaShopBundle\\Entity\\FeatureFlag',
+            ],
+            'description' => [
+                2 => '',
+                4 => '',
+                '',
+                7 => '',
+                '',
+                11 => '',
+                '',
+                'Deletes a FeatureFlag.',
+                'Updates a FeatureFlag.',
+                'Creates a FeatureFlag.',
             ],
             'filters' => [
                 2 => [],
@@ -191,11 +206,6 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
             ],
             'read' => [
                 7 => false,
-            ],
-            'description' => [
-                13 => 'Deletes a FeatureFlag.',
-                'Updates a FeatureFlag.',
-                'Creates a FeatureFlag.',
             ],
         ],
         'ApiPlatform\\Metadata\\HttpOperation' => [

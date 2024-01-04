@@ -2,15 +2,15 @@
 
 {shop_url}
 
-Hi {firstname} {lastname},
+Olá {firstname} {lastname},
 
-Order ID {order_name} - Voucher code generated
+Encomenda nº {order_name} - Código de voucher gerado
 
-We are pleased to inform you that a voucher has been generated in your name for order with the reference {order_name}.
+Temos o prazer de o informar que um Vale de Desconto foi gerado no seu nome para a encomenda com referência {order_name}.
 
-VOUCHER CODE: {voucher_num} in the amount of {voucher_amount}
+Código do Vale de Desconto: {voucher_num} no valor de {voucher_amount}
 
-In order to use it, just copy/paste this code during check out.
+Para o usar, insira este código no momento de checkout.
 
 [{shop_name}]({shop_url})
 

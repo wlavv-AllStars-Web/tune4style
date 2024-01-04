@@ -2,15 +2,15 @@
 
 {shop_url}
 
-Hi,
+Olá,
 
-Message from customer
+Mensagem do cliente
 
-You have received a new message regarding order with the reference {order_name}.
+Recebeu uma nova mensagem sobre a encomenda com a referência {order_name}.
 
-Customer: {firstname} {lastname} ({email})
+Cliente: {firstname} {lastname} ({email})
 
-Customer message:
+Mensagem do cliente:
 
 {message}
 

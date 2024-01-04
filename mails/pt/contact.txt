@@ -2,15 +2,15 @@
 
 {shop_url}
 
-Message from a {shop_name} customer
+Mensagem de um cliente da loja {shop_name}
 
-Customer Email Address: {email}
+Email do cliente: {email}
 
-Order ID #:  {order_name}
+N.º da Encomenda #:  {order_name}
 
-Attached file: {attached_file}
+Ficheiro anexo: {attached_file}
 
-Customer message:
+Mensagem do cliente:
 
 {message}
 

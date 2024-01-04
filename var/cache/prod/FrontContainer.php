@@ -83,6 +83,50 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
             'prestashop.translation.translator_language_loader' => 'getPrestashop_Translation_TranslatorLanguageLoaderService',
             'product_comment_criterion_repository' => 'getProductCommentCriterionRepositoryService',
             'product_comment_repository' => 'getProductCommentRepositoryService',
+            'worldlineop.checksum.address' => 'getWorldlineop_Checksum_AddressService',
+            'worldlineop.checksum.cart' => 'getWorldlineop_Checksum_CartService',
+            'worldlineop.context' => 'getWorldlineop_ContextService',
+            'worldlineop.event.presenter' => 'getWorldlineop_Event_PresenterService',
+            'worldlineop.getpayment.presenter' => 'getWorldlineop_Getpayment_PresenterService',
+            'worldlineop.getrefund.presenter' => 'getWorldlineop_Getrefund_PresenterService',
+            'worldlineop.hosted_payment_request.builder' => 'getWorldlineop_HostedPaymentRequest_BuilderService',
+            'worldlineop.hosted_payment_request.director' => 'getWorldlineop_HostedPaymentRequest_DirectorService',
+            'worldlineop.installer' => 'getWorldlineop_InstallerService',
+            'worldlineop.logger' => 'getWorldlineop_LoggerService',
+            'worldlineop.logger.factory' => 'getWorldlineop_Logger_FactoryService',
+            'worldlineop.module' => 'getWorldlineop_ModuleService',
+            'worldlineop.payment.presenter' => 'getWorldlineop_Payment_PresenterService',
+            'worldlineop.payment_request.builder' => 'getWorldlineop_PaymentRequest_BuilderService',
+            'worldlineop.payment_request.director' => 'getWorldlineop_PaymentRequest_DirectorService',
+            'worldlineop.processor.transaction' => 'getWorldlineop_Processor_TransactionService',
+            'worldlineop.repository.created_payment' => 'getWorldlineop_Repository_CreatedPaymentService',
+            'worldlineop.repository.hosted_checkout' => 'getWorldlineop_Repository_HostedCheckoutService',
+            'worldlineop.repository.token' => 'getWorldlineop_Repository_TokenService',
+            'worldlineop.repository.transaction' => 'getWorldlineop_Repository_TransactionService',
+            'worldlineop.sdk.client' => 'getWorldlineop_Sdk_ClientService',
+            'worldlineop.sdk.client.factory' => 'getWorldlineop_Sdk_Client_FactoryService',
+            'worldlineop.sdk.communicator' => 'getWorldlineop_Sdk_CommunicatorService',
+            'worldlineop.sdk.communicator_configuration.factory' => 'getWorldlineop_Sdk_CommunicatorConfiguration_FactoryService',
+            'worldlineop.sdk.connection' => 'getWorldlineop_Sdk_ConnectionService',
+            'worldlineop.settings' => 'getWorldlineop_SettingsService',
+            'worldlineop.settings.account.resolver' => 'getWorldlineop_Settings_Account_ResolverService',
+            'worldlineop.settings.account.updater' => 'getWorldlineop_Settings_Account_UpdaterService',
+            'worldlineop.settings.account.validation' => 'getWorldlineop_Settings_Account_ValidationService',
+            'worldlineop.settings.advanced_settings.resolver' => 'getWorldlineop_Settings_AdvancedSettings_ResolverService',
+            'worldlineop.settings.advanced_settings.updater' => 'getWorldlineop_Settings_AdvancedSettings_UpdaterService',
+            'worldlineop.settings.advanced_settings.validation' => 'getWorldlineop_Settings_AdvancedSettings_ValidationService',
+            'worldlineop.settings.factory' => 'getWorldlineop_Settings_FactoryService',
+            'worldlineop.settings.get_products' => 'getWorldlineop_Settings_GetProductsService',
+            'worldlineop.settings.loader' => 'getWorldlineop_Settings_LoaderService',
+            'worldlineop.settings.payment_methods.resolver' => 'getWorldlineop_Settings_PaymentMethods_ResolverService',
+            'worldlineop.settings.payment_methods.updater' => 'getWorldlineop_Settings_PaymentMethods_UpdaterService',
+            'worldlineop.settings.payment_methods.validation' => 'getWorldlineop_Settings_PaymentMethods_ValidationService',
+            'worldlineop.settings.presenter' => 'getWorldlineop_Settings_PresenterService',
+            'worldlineop.settings.serializer' => 'getWorldlineop_Settings_SerializerService',
+            'worldlineop.shopping_cart.presenter' => 'getWorldlineop_ShoppingCart_PresenterService',
+            'worldlineop.status.manager' => 'getWorldlineop_Status_ManagerService',
+            'worldlineop.storedcards.presenter' => 'getWorldlineop_Storedcards_PresenterService',
+            'worldlineop.tab.manager' => 'getWorldlineop_Tab_ManagerService',
             'prestashop.adapter.tools' => 'getPrestashop_Adapter_ToolsService',
         ];
         $this->aliases = [
@@ -782,6 +826,454 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
     }
 
     /**
+     * Gets the public 'worldlineop.checksum.address' shared service.
+     *
+     * @return \AddressChecksum
+     */
+    protected function getWorldlineop_Checksum_AddressService()
+    {
+        return $this->services['worldlineop.checksum.address'] = new \AddressChecksum();
+    }
+
+    /**
+     * Gets the public 'worldlineop.checksum.cart' shared service.
+     *
+     * @return \WorldlineopCartChecksum
+     */
+    protected function getWorldlineop_Checksum_CartService()
+    {
+        return $this->services['worldlineop.checksum.cart'] = new \WorldlineopCartChecksum(($this->services['worldlineop.checksum.address'] ?? ($this->services['worldlineop.checksum.address'] = new \AddressChecksum())));
+    }
+
+    /**
+     * Gets the public 'worldlineop.context' shared service.
+     *
+     * @return \Context
+     */
+    protected function getWorldlineop_ContextService()
+    {
+        return $this->services['worldlineop.context'] = \Context::getContext();
+    }
+
+    /**
+     * Gets the public 'worldlineop.event.presenter' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Presenter\WebhookEventPresenter
+     */
+    protected function getWorldlineop_Event_PresenterService()
+    {
+        return $this->services['worldlineop.event.presenter'] = new \WorldlineOP\PrestaShop\Presenter\WebhookEventPresenter(($this->services['worldlineop.getpayment.presenter'] ?? $this->getWorldlineop_Getpayment_PresenterService()), ($this->services['worldlineop.getrefund.presenter'] ?? $this->getWorldlineop_Getrefund_PresenterService()), ($this->services['worldlineop.logger.factory'] ?? $this->getWorldlineop_Logger_FactoryService()));
+    }
+
+    /**
+     * Gets the public 'worldlineop.getpayment.presenter' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Presenter\GetPaymentPresenter
+     */
+    protected function getWorldlineop_Getpayment_PresenterService()
+    {
+        return $this->services['worldlineop.getpayment.presenter'] = new \WorldlineOP\PrestaShop\Presenter\GetPaymentPresenter(($this->services['worldlineop.module'] ?? $this->getWorldlineop_ModuleService()), ($this->services['worldlineop.sdk.client.factory'] ?? $this->getWorldlineop_Sdk_Client_FactoryService()), ($this->services['worldlineop.settings.loader'] ?? $this->getWorldlineop_Settings_LoaderService()), ($this->services['worldlineop.logger.factory'] ?? $this->getWorldlineop_Logger_FactoryService()));
+    }
+
+    /**
+     * Gets the public 'worldlineop.getrefund.presenter' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Presenter\GetRefundPresenter
+     */
+    protected function getWorldlineop_Getrefund_PresenterService()
+    {
+        return $this->services['worldlineop.getrefund.presenter'] = new \WorldlineOP\PrestaShop\Presenter\GetRefundPresenter(($this->services['worldlineop.module'] ?? $this->getWorldlineop_ModuleService()), ($this->services['worldlineop.logger.factory'] ?? $this->getWorldlineop_Logger_FactoryService()));
+    }
+
+    /**
+     * Gets the public 'worldlineop.hosted_payment_request.builder' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Builder\HostedPaymentRequestBuilder
+     */
+    protected function getWorldlineop_HostedPaymentRequest_BuilderService()
+    {
+        return $this->services['worldlineop.hosted_payment_request.builder'] = new \WorldlineOP\PrestaShop\Builder\HostedPaymentRequestBuilder(($this->services['worldlineop.settings.factory'] ?? $this->getWorldlineop_Settings_FactoryService())->deserialize(($this->services['worldlineop.settings.serializer'] ?? ($this->services['worldlineop.settings.serializer'] = new \WorldlineOP\PrestaShop\Serializer\SettingsSerializer()))->getSerializer()), ($this->services['worldlineop.module'] ?? $this->getWorldlineop_ModuleService()), ($this->services['worldlineop.context'] ?? $this->getWorldlineop_ContextService()), ($this->services['worldlineop.shopping_cart.presenter'] ?? ($this->services['worldlineop.shopping_cart.presenter'] = new \WorldlineOP\PrestaShop\Presenter\ShoppingCartPresenter())));
+    }
+
+    /**
+     * Gets the public 'worldlineop.hosted_payment_request.director' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Builder\PaymentRequestDirector
+     */
+    protected function getWorldlineop_HostedPaymentRequest_DirectorService()
+    {
+        $this->services['worldlineop.hosted_payment_request.director'] = $instance = new \WorldlineOP\PrestaShop\Builder\PaymentRequestDirector();
+
+        $instance->setBuilder(($this->services['worldlineop.hosted_payment_request.builder'] ?? $this->getWorldlineop_HostedPaymentRequest_BuilderService()));
+
+        return $instance;
+    }
+
+    /**
+     * Gets the public 'worldlineop.installer' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Installer\Installer
+     */
+    protected function getWorldlineop_InstallerService()
+    {
+        return $this->services['worldlineop.installer'] = new \WorldlineOP\PrestaShop\Installer\Installer(($this->services['worldlineop.module'] ?? $this->getWorldlineop_ModuleService()), ($this->services['worldlineop.tab.manager'] ?? ($this->services['worldlineop.tab.manager'] = new \WorldlineOP\PrestaShop\Utils\TabManager())), ($this->services['worldlineop.status.manager'] ?? ($this->services['worldlineop.status.manager'] = new \WorldlineOP\PrestaShop\Utils\OrderStatusManager())), ($this->services['worldlineop.settings.account.updater'] ?? $this->getWorldlineop_Settings_Account_UpdaterService()), ($this->services['worldlineop.settings.advanced_settings.updater'] ?? $this->getWorldlineop_Settings_AdvancedSettings_UpdaterService()), ($this->services['worldlineop.settings.payment_methods.updater'] ?? $this->getWorldlineop_Settings_PaymentMethods_UpdaterService()), '8.1.3', ($this->services['worldlineop.logger.factory'] ?? $this->getWorldlineop_Logger_FactoryService()));
+    }
+
+    /**
+     * Gets the public 'worldlineop.logger' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Logger\LoggerFactory
+     */
+    protected function getWorldlineop_LoggerService()
+    {
+        return $this->services['worldlineop.logger'] = ($this->services['worldlineop.logger.factory'] ?? $this->getWorldlineop_Logger_FactoryService())->getLogger(($this->services['worldlineop.settings.factory'] ?? $this->getWorldlineop_Settings_FactoryService())->deserialize(($this->services['worldlineop.settings.serializer'] ?? ($this->services['worldlineop.settings.serializer'] = new \WorldlineOP\PrestaShop\Serializer\SettingsSerializer()))->getSerializer()));
+    }
+
+    /**
+     * Gets the public 'worldlineop.logger.factory' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Logger\LoggerFactory
+     */
+    protected function getWorldlineop_Logger_FactoryService()
+    {
+        return $this->services['worldlineop.logger.factory'] = new \WorldlineOP\PrestaShop\Logger\LoggerFactory(($this->services['worldlineop.settings.factory'] ?? $this->getWorldlineop_Settings_FactoryService())->deserialize(($this->services['worldlineop.settings.serializer'] ?? ($this->services['worldlineop.settings.serializer'] = new \WorldlineOP\PrestaShop\Serializer\SettingsSerializer()))->getSerializer()));
+    }
+
+    /**
+     * Gets the public 'worldlineop.module' shared service.
+     *
+     * @return \Worldlineop
+     */
+    protected function getWorldlineop_ModuleService()
+    {
+        return $this->services['worldlineop.module'] = \Module::getInstanceByName('worldlineop');
+    }
+
+    /**
+     * Gets the public 'worldlineop.payment.presenter' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Presenter\PaymentOptionsPresenter
+     */
+    protected function getWorldlineop_Payment_PresenterService()
+    {
+        return $this->services['worldlineop.payment.presenter'] = new \WorldlineOP\PrestaShop\Presenter\PaymentOptionsPresenter(($this->services['worldlineop.module'] ?? $this->getWorldlineop_ModuleService()), ($this->services['worldlineop.settings.factory'] ?? $this->getWorldlineop_Settings_FactoryService())->deserialize(($this->services['worldlineop.settings.serializer'] ?? ($this->services['worldlineop.settings.serializer'] = new \WorldlineOP\PrestaShop\Serializer\SettingsSerializer()))->getSerializer()), ($this->services['worldlineop.context'] ?? $this->getWorldlineop_ContextService()));
+    }
+
+    /**
+     * Gets the public 'worldlineop.payment_request.builder' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Builder\PaymentRequestBuilder
+     */
+    protected function getWorldlineop_PaymentRequest_BuilderService()
+    {
+        return $this->services['worldlineop.payment_request.builder'] = new \WorldlineOP\PrestaShop\Builder\PaymentRequestBuilder(($this->services['worldlineop.settings.factory'] ?? $this->getWorldlineop_Settings_FactoryService())->deserialize(($this->services['worldlineop.settings.serializer'] ?? ($this->services['worldlineop.settings.serializer'] = new \WorldlineOP\PrestaShop\Serializer\SettingsSerializer()))->getSerializer()), ($this->services['worldlineop.module'] ?? $this->getWorldlineop_ModuleService()), ($this->services['worldlineop.context'] ?? $this->getWorldlineop_ContextService()), ($this->services['worldlineop.shopping_cart.presenter'] ?? ($this->services['worldlineop.shopping_cart.presenter'] = new \WorldlineOP\PrestaShop\Presenter\ShoppingCartPresenter())));
+    }
+
+    /**
+     * Gets the public 'worldlineop.payment_request.director' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Builder\PaymentRequestDirector
+     */
+    protected function getWorldlineop_PaymentRequest_DirectorService()
+    {
+        $this->services['worldlineop.payment_request.director'] = $instance = new \WorldlineOP\PrestaShop\Builder\PaymentRequestDirector();
+
+        $instance->setBuilder(($this->services['worldlineop.payment_request.builder'] ?? $this->getWorldlineop_PaymentRequest_BuilderService()));
+
+        return $instance;
+    }
+
+    /**
+     * Gets the public 'worldlineop.processor.transaction' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Processor\TransactionResponseProcessor
+     */
+    protected function getWorldlineop_Processor_TransactionService()
+    {
+        return $this->services['worldlineop.processor.transaction'] = new \WorldlineOP\PrestaShop\Processor\TransactionResponseProcessor(($this->services['worldlineop.module'] ?? $this->getWorldlineop_ModuleService()), ($this->services['worldlineop.logger.factory'] ?? $this->getWorldlineop_Logger_FactoryService()));
+    }
+
+    /**
+     * Gets the public 'worldlineop.repository.created_payment' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Repository\CreatedPaymentRepository
+     */
+    protected function getWorldlineop_Repository_CreatedPaymentService()
+    {
+        return $this->services['worldlineop.repository.created_payment'] = new \WorldlineOP\PrestaShop\Repository\CreatedPaymentRepository();
+    }
+
+    /**
+     * Gets the public 'worldlineop.repository.hosted_checkout' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Repository\HostedCheckoutRepository
+     */
+    protected function getWorldlineop_Repository_HostedCheckoutService()
+    {
+        return $this->services['worldlineop.repository.hosted_checkout'] = new \WorldlineOP\PrestaShop\Repository\HostedCheckoutRepository();
+    }
+
+    /**
+     * Gets the public 'worldlineop.repository.token' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Repository\TokenRepository
+     */
+    protected function getWorldlineop_Repository_TokenService()
+    {
+        return $this->services['worldlineop.repository.token'] = new \WorldlineOP\PrestaShop\Repository\TokenRepository();
+    }
+
+    /**
+     * Gets the public 'worldlineop.repository.transaction' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Repository\TransactionRepository
+     */
+    protected function getWorldlineop_Repository_TransactionService()
+    {
+        return $this->services['worldlineop.repository.transaction'] = new \WorldlineOP\PrestaShop\Repository\TransactionRepository();
+    }
+
+    /**
+     * Gets the public 'worldlineop.sdk.client' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Sdk\ClientFactory
+     */
+    protected function getWorldlineop_Sdk_ClientService()
+    {
+        return $this->services['worldlineop.sdk.client'] = ($this->services['worldlineop.sdk.client.factory'] ?? $this->getWorldlineop_Sdk_Client_FactoryService())->getMerchant(($this->services['worldlineop.sdk.communicator'] ?? $this->getWorldlineop_Sdk_CommunicatorService()), ($this->services['worldlineop.settings.factory'] ?? $this->getWorldlineop_Settings_FactoryService())->deserialize(($this->services['worldlineop.settings.serializer'] ?? ($this->services['worldlineop.settings.serializer'] = new \WorldlineOP\PrestaShop\Serializer\SettingsSerializer()))->getSerializer()));
+    }
+
+    /**
+     * Gets the public 'worldlineop.sdk.client.factory' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Sdk\ClientFactory
+     */
+    protected function getWorldlineop_Sdk_Client_FactoryService()
+    {
+        return $this->services['worldlineop.sdk.client.factory'] = new \WorldlineOP\PrestaShop\Sdk\ClientFactory(($this->services['worldlineop.sdk.communicator'] ?? $this->getWorldlineop_Sdk_CommunicatorService()), ($this->services['worldlineop.settings.factory'] ?? $this->getWorldlineop_Settings_FactoryService())->deserialize(($this->services['worldlineop.settings.serializer'] ?? ($this->services['worldlineop.settings.serializer'] = new \WorldlineOP\PrestaShop\Serializer\SettingsSerializer()))->getSerializer()));
+    }
+
+    /**
+     * Gets the public 'worldlineop.sdk.communicator' shared service.
+     *
+     * @return \OnlinePayments\Sdk\Communicator
+     */
+    protected function getWorldlineop_Sdk_CommunicatorService()
+    {
+        return $this->services['worldlineop.sdk.communicator'] = new \OnlinePayments\Sdk\Communicator(($this->services['worldlineop.sdk.connection'] ?? ($this->services['worldlineop.sdk.connection'] = new \OnlinePayments\Sdk\DefaultConnection())), ($this->services['worldlineop.sdk.communicator_configuration.factory'] ?? $this->getWorldlineop_Sdk_CommunicatorConfiguration_FactoryService())->getInstance());
+    }
+
+    /**
+     * Gets the public 'worldlineop.sdk.communicator_configuration.factory' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Sdk\CommunicatorConfigurationFactory
+     */
+    protected function getWorldlineop_Sdk_CommunicatorConfiguration_FactoryService()
+    {
+        return $this->services['worldlineop.sdk.communicator_configuration.factory'] = new \WorldlineOP\PrestaShop\Sdk\CommunicatorConfigurationFactory(($this->services['worldlineop.settings.factory'] ?? $this->getWorldlineop_Settings_FactoryService())->deserialize(($this->services['worldlineop.settings.serializer'] ?? ($this->services['worldlineop.settings.serializer'] = new \WorldlineOP\PrestaShop\Serializer\SettingsSerializer()))->getSerializer()), ($this->services['worldlineop.module'] ?? $this->getWorldlineop_ModuleService()));
+    }
+
+    /**
+     * Gets the public 'worldlineop.sdk.connection' shared service.
+     *
+     * @return \OnlinePayments\Sdk\DefaultConnection
+     */
+    protected function getWorldlineop_Sdk_ConnectionService()
+    {
+        return $this->services['worldlineop.sdk.connection'] = new \OnlinePayments\Sdk\DefaultConnection();
+    }
+
+    /**
+     * Gets the public 'worldlineop.settings' service.
+     *
+     * @return \WorldlineOP\PrestaShop\Configuration\Loader\SettingsLoader
+     */
+    protected function getWorldlineop_SettingsService()
+    {
+        return ($this->services['worldlineop.settings.factory'] ?? $this->getWorldlineop_Settings_FactoryService())->deserialize(($this->services['worldlineop.settings.serializer'] ?? ($this->services['worldlineop.settings.serializer'] = new \WorldlineOP\PrestaShop\Serializer\SettingsSerializer()))->getSerializer());
+    }
+
+    /**
+     * Gets the public 'worldlineop.settings.account.resolver' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\OptionsResolver\AccountSettingsResolver
+     */
+    protected function getWorldlineop_Settings_Account_ResolverService()
+    {
+        return $this->services['worldlineop.settings.account.resolver'] = new \WorldlineOP\PrestaShop\OptionsResolver\AccountSettingsResolver();
+    }
+
+    /**
+     * Gets the public 'worldlineop.settings.account.updater' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Configuration\Updater\AccountSettingsUpdater
+     */
+    protected function getWorldlineop_Settings_Account_UpdaterService()
+    {
+        return $this->services['worldlineop.settings.account.updater'] = new \WorldlineOP\PrestaShop\Configuration\Updater\AccountSettingsUpdater(($this->services['worldlineop.settings.serializer'] ?? ($this->services['worldlineop.settings.serializer'] = new \WorldlineOP\PrestaShop\Serializer\SettingsSerializer()))->getSerializer(), ($this->services['worldlineop.settings.account.resolver'] ?? ($this->services['worldlineop.settings.account.resolver'] = new \WorldlineOP\PrestaShop\OptionsResolver\AccountSettingsResolver())), ($this->services['worldlineop.settings.factory'] ?? $this->getWorldlineop_Settings_FactoryService())->deserialize(($this->services['worldlineop.settings.serializer'] ?? ($this->services['worldlineop.settings.serializer'] = new \WorldlineOP\PrestaShop\Serializer\SettingsSerializer()))->getSerializer()), ($this->services['worldlineop.settings.account.validation'] ?? $this->getWorldlineop_Settings_Account_ValidationService()), ($this->services['worldlineop.module'] ?? $this->getWorldlineop_ModuleService()));
+    }
+
+    /**
+     * Gets the public 'worldlineop.settings.account.validation' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Configuration\Validation\AccountValidationData
+     */
+    protected function getWorldlineop_Settings_Account_ValidationService()
+    {
+        return $this->services['worldlineop.settings.account.validation'] = new \WorldlineOP\PrestaShop\Configuration\Validation\AccountValidationData(($this->services['worldlineop.module'] ?? $this->getWorldlineop_ModuleService()));
+    }
+
+    /**
+     * Gets the public 'worldlineop.settings.advanced_settings.resolver' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\OptionsResolver\AdvancedSettingsResolver
+     */
+    protected function getWorldlineop_Settings_AdvancedSettings_ResolverService()
+    {
+        return $this->services['worldlineop.settings.advanced_settings.resolver'] = new \WorldlineOP\PrestaShop\OptionsResolver\AdvancedSettingsResolver();
+    }
+
+    /**
+     * Gets the public 'worldlineop.settings.advanced_settings.updater' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Configuration\Updater\AdvancedSettingsUpdater
+     */
+    protected function getWorldlineop_Settings_AdvancedSettings_UpdaterService()
+    {
+        return $this->services['worldlineop.settings.advanced_settings.updater'] = new \WorldlineOP\PrestaShop\Configuration\Updater\AdvancedSettingsUpdater(($this->services['worldlineop.settings.serializer'] ?? ($this->services['worldlineop.settings.serializer'] = new \WorldlineOP\PrestaShop\Serializer\SettingsSerializer()))->getSerializer(), ($this->services['worldlineop.settings.advanced_settings.resolver'] ?? ($this->services['worldlineop.settings.advanced_settings.resolver'] = new \WorldlineOP\PrestaShop\OptionsResolver\AdvancedSettingsResolver())), ($this->services['worldlineop.settings.factory'] ?? $this->getWorldlineop_Settings_FactoryService())->deserialize(($this->services['worldlineop.settings.serializer'] ?? ($this->services['worldlineop.settings.serializer'] = new \WorldlineOP\PrestaShop\Serializer\SettingsSerializer()))->getSerializer()), ($this->services['worldlineop.settings.advanced_settings.validation'] ?? $this->getWorldlineop_Settings_AdvancedSettings_ValidationService()), ($this->services['worldlineop.module'] ?? $this->getWorldlineop_ModuleService()));
+    }
+
+    /**
+     * Gets the public 'worldlineop.settings.advanced_settings.validation' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Configuration\Validation\AdvancedSettingsValidationData
+     */
+    protected function getWorldlineop_Settings_AdvancedSettings_ValidationService()
+    {
+        return $this->services['worldlineop.settings.advanced_settings.validation'] = new \WorldlineOP\PrestaShop\Configuration\Validation\AdvancedSettingsValidationData(($this->services['worldlineop.module'] ?? $this->getWorldlineop_ModuleService()));
+    }
+
+    /**
+     * Gets the public 'worldlineop.settings.factory' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Configuration\Loader\SettingsLoader
+     */
+    protected function getWorldlineop_Settings_FactoryService()
+    {
+        return $this->services['worldlineop.settings.factory'] = new \WorldlineOP\PrestaShop\Configuration\Loader\SettingsLoader(($this->services['worldlineop.settings.serializer'] ?? ($this->services['worldlineop.settings.serializer'] = new \WorldlineOP\PrestaShop\Serializer\SettingsSerializer()))->getSerializer());
+    }
+
+    /**
+     * Gets the public 'worldlineop.settings.get_products' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Configuration\Product\GetProductsRequest
+     */
+    protected function getWorldlineop_Settings_GetProductsService()
+    {
+        return $this->services['worldlineop.settings.get_products'] = new \WorldlineOP\PrestaShop\Configuration\Product\GetProductsRequest(($this->services['worldlineop.sdk.client'] ?? $this->getWorldlineop_Sdk_ClientService()), ($this->services['worldlineop.settings.factory'] ?? $this->getWorldlineop_Settings_FactoryService())->deserialize(($this->services['worldlineop.settings.serializer'] ?? ($this->services['worldlineop.settings.serializer'] = new \WorldlineOP\PrestaShop\Serializer\SettingsSerializer()))->getSerializer()), ($this->services['worldlineop.logger.factory'] ?? $this->getWorldlineop_Logger_FactoryService()));
+    }
+
+    /**
+     * Gets the public 'worldlineop.settings.loader' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Configuration\Loader\SettingsLoader
+     */
+    protected function getWorldlineop_Settings_LoaderService()
+    {
+        return $this->services['worldlineop.settings.loader'] = new \WorldlineOP\PrestaShop\Configuration\Loader\SettingsLoader(($this->services['worldlineop.settings.serializer'] ?? ($this->services['worldlineop.settings.serializer'] = new \WorldlineOP\PrestaShop\Serializer\SettingsSerializer()))->getSerializer());
+    }
+
+    /**
+     * Gets the public 'worldlineop.settings.payment_methods.resolver' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\OptionsResolver\PaymentMethodsSettingsResolver
+     */
+    protected function getWorldlineop_Settings_PaymentMethods_ResolverService()
+    {
+        return $this->services['worldlineop.settings.payment_methods.resolver'] = new \WorldlineOP\PrestaShop\OptionsResolver\PaymentMethodsSettingsResolver();
+    }
+
+    /**
+     * Gets the public 'worldlineop.settings.payment_methods.updater' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Configuration\Updater\PaymentMethodsSettingsUpdater
+     */
+    protected function getWorldlineop_Settings_PaymentMethods_UpdaterService()
+    {
+        return $this->services['worldlineop.settings.payment_methods.updater'] = new \WorldlineOP\PrestaShop\Configuration\Updater\PaymentMethodsSettingsUpdater(($this->services['worldlineop.settings.serializer'] ?? ($this->services['worldlineop.settings.serializer'] = new \WorldlineOP\PrestaShop\Serializer\SettingsSerializer()))->getSerializer(), ($this->services['worldlineop.settings.payment_methods.resolver'] ?? ($this->services['worldlineop.settings.payment_methods.resolver'] = new \WorldlineOP\PrestaShop\OptionsResolver\PaymentMethodsSettingsResolver())), ($this->services['worldlineop.settings.factory'] ?? $this->getWorldlineop_Settings_FactoryService())->deserialize(($this->services['worldlineop.settings.serializer'] ?? ($this->services['worldlineop.settings.serializer'] = new \WorldlineOP\PrestaShop\Serializer\SettingsSerializer()))->getSerializer()), ($this->services['worldlineop.settings.payment_methods.validation'] ?? $this->getWorldlineop_Settings_PaymentMethods_ValidationService()), ($this->services['worldlineop.module'] ?? $this->getWorldlineop_ModuleService()));
+    }
+
+    /**
+     * Gets the public 'worldlineop.settings.payment_methods.validation' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Configuration\Validation\PaymentMethodsValidationData
+     */
+    protected function getWorldlineop_Settings_PaymentMethods_ValidationService()
+    {
+        return $this->services['worldlineop.settings.payment_methods.validation'] = new \WorldlineOP\PrestaShop\Configuration\Validation\PaymentMethodsValidationData(($this->services['worldlineop.module'] ?? $this->getWorldlineop_ModuleService()));
+    }
+
+    /**
+     * Gets the public 'worldlineop.settings.presenter' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Presenter\ModuleConfigurationPresenter
+     */
+    protected function getWorldlineop_Settings_PresenterService()
+    {
+        return $this->services['worldlineop.settings.presenter'] = new \WorldlineOP\PrestaShop\Presenter\ModuleConfigurationPresenter(($this->services['worldlineop.module'] ?? $this->getWorldlineop_ModuleService()), ($this->services['worldlineop.settings.loader'] ?? $this->getWorldlineop_Settings_LoaderService()));
+    }
+
+    /**
+     * Gets the public 'worldlineop.settings.serializer' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Serializer\SettingsSerializer
+     */
+    protected function getWorldlineop_Settings_SerializerService()
+    {
+        return $this->services['worldlineop.settings.serializer'] = new \WorldlineOP\PrestaShop\Serializer\SettingsSerializer();
+    }
+
+    /**
+     * Gets the public 'worldlineop.shopping_cart.presenter' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Presenter\ShoppingCartPresenter
+     */
+    protected function getWorldlineop_ShoppingCart_PresenterService()
+    {
+        return $this->services['worldlineop.shopping_cart.presenter'] = new \WorldlineOP\PrestaShop\Presenter\ShoppingCartPresenter();
+    }
+
+    /**
+     * Gets the public 'worldlineop.status.manager' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Utils\OrderStatusManager
+     */
+    protected function getWorldlineop_Status_ManagerService()
+    {
+        return $this->services['worldlineop.status.manager'] = new \WorldlineOP\PrestaShop\Utils\OrderStatusManager();
+    }
+
+    /**
+     * Gets the public 'worldlineop.storedcards.presenter' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Presenter\StoredCardsPresenter
+     */
+    protected function getWorldlineop_Storedcards_PresenterService()
+    {
+        return $this->services['worldlineop.storedcards.presenter'] = new \WorldlineOP\PrestaShop\Presenter\StoredCardsPresenter(($this->services['worldlineop.module'] ?? $this->getWorldlineop_ModuleService()), ($this->services['worldlineop.context'] ?? $this->getWorldlineop_ContextService()), ($this->services['worldlineop.sdk.client'] ?? $this->getWorldlineop_Sdk_ClientService()), ($this->services['worldlineop.repository.token'] ?? ($this->services['worldlineop.repository.token'] = new \WorldlineOP\PrestaShop\Repository\TokenRepository())));
+    }
+
+    /**
+     * Gets the public 'worldlineop.tab.manager' shared service.
+     *
+     * @return \WorldlineOP\PrestaShop\Utils\TabManager
+     */
+    protected function getWorldlineop_Tab_ManagerService()
+    {
+        return $this->services['worldlineop.tab.manager'] = new \WorldlineOP\PrestaShop\Utils\TabManager();
+    }
+
+    /**
      * Gets the private 'PrestaShopBundle\DependencyInjection\RuntimeConstEnvVarProcessor' shared service.
      *
      * @return \PrestaShopBundle\DependencyInjection\RuntimeConstEnvVarProcessor
@@ -876,8 +1368,8 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
             'cookie_key' => 'NUaOYdeZ56yztenbBiYmMKGauNV7uR22vBKDXJIMnbJ5YJPoyIDoCjXrvFoys4yP',
             'cookie_iv' => '81EhAYBTiRcSaOy3YIoZ7odphqvi3IKs',
             'new_cookie_key' => 'def00000a22ea83ca9b3a1c1b78398a40c615053c929c9116877a0181151bb0910d6ecae837a2549b709993b55f0b4cc7ccdb666a2eb9afe6482bf31e99572a38204f9e5',
-            'api_public_key' => '-----BEGIN PUBLIC KEY-----'."\n".'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwAfxxq2mfT6J6CMUIaS/'."\n".'CRz5YbTf2thQW1qyGA7ovkqij/n2Q9Sz6tlGjaF6Q7NtGf2Kp3HcjxPsKlHCFNwj'."\n".'zGi4Df0F+6UqJmkNRWHFaBMaV3Db7rkGxtx8UWfREHOHKN5Kk/U1eJOa640emQr8'."\n".'KqVsQiJ2OK2o6ed7SRnxyjFXOjNRiYG5ZbNOY/5mtfmlS4NdyTvYYw82kDTtqpLf'."\n".'9Asfzcsd7WJtARlhnaak2Eh51fl0bH2GETUkK957L2MdKR6ZRszmduaqPXFIhviZ'."\n".'PGnK+u15LOPrlI0e2psyqVrNubtGCAnMNEDeKctLr/UGc+sSyMovtPCn3aK+3ECT'."\n".'kwIDAQAB'."\n".'-----END PUBLIC KEY-----'."\n".'',
-            'api_private_key' => '-----BEGIN PRIVATE KEY-----'."\n".'MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDAB/HGraZ9Pono'."\n".'IxQhpL8JHPlhtN/a2FBbWrIYDui+SqKP+fZD1LPq2UaNoXpDs20Z/YqncdyPE+wq'."\n".'UcIU3CPMaLgN/QX7pSomaQ1FYcVoExpXcNvuuQbG3HxRZ9EQc4co3kqT9TV4k5rr'."\n".'jR6ZCvwqpWxCInY4rajp53tJGfHKMVc6M1GJgblls05j/ma1+aVLg13JO9hjDzaQ'."\n".'NO2qkt/0Cx/Nyx3tYm0BGWGdpqTYSHnV+XRsfYYRNSQr3nsvYx0pHplGzOZ25qo9'."\n".'cUiG+Jk8acr67Xks4+uUjR7amzKpWs25u0YICcw0QN4py0uv9QZz6xLIyi+08Kfd'."\n".'or7cQJOTAgMBAAECggEANwrP6XPi0el4G/raDV6sh08vyCrRM2hneBgCDlVPryOz'."\n".'fvNV/FFelMVcrMIJSpiGgDmlYaOIZdZ/Dg5LRDFpbXDiuNe6vEu2TjY0YJvKuq8n'."\n".'EMM/tyh/4cZXN/o6+a0zo6o71Dcn8XzVngjgKVv1tb+ezUIVgt98GDeKpgRywtJs'."\n".'VHAFX33QdLQ4aqOWRXSulHzPb+ircztw3rFpChVLyIsd82ZDOXcZ1QegLJ1f468P'."\n".'pqlFvYSFGZtjTdwmndq1J2ojDwUcEWIK8K11uq1jXDMDFkznMQ7Q9o2PRo9nGbDo'."\n".'NiMs7Llf6diOsLtMtdocqF+XvrN/9gjSoTqYO+ibQQKBgQDtx3TrXh1Tt0PqJfHx'."\n".'JAu1fQ0ZHwcmfL0NESmIQbldVCYuIbalXoXIMPa6VS+k9Q/XoKHbDb6k42wIwTUC'."\n".'E7C94z7bHxRL+/cVdW9/hcIxIgm8MN6guBk0XVy2I8WSPqhvEqPAdPd/4nbtkj5m'."\n".'EgVMI6zYHh0IlypBENyJa+zaoQKBgQDOvwqi2PfWjd5uFWkFaXEM293T3uBOXOYT'."\n".'72OZeZt91GrmRbDQtP0BiRLCsvkVpolxRj3nsUXJj1rKXkEhpPBaCcVhR2dWz547'."\n".'W906yDuSNIkkWCf7d4Dyllh2uNeX+tbB7mo+BArqr625BvHmn5L/JC5BcwtCDSbk'."\n".'QfGe8+SVswKBgDnFc0fYZwG3Dj4ul/kBzAJ9bphC7KbSOdCZ8eBUL6hYUKp2sHy/'."\n".'WXvJQbkGB3xpuj6mnYyuazp+svnxj2KAzDlmpBfzFihcAK1rCfsO0Z7EaV8a9IxS'."\n".'DnWllWf/ivo8VQofmj+ha5zbtg+Er7p2+GiGZnFf56f1qmOCqEKPQU3hAoGARZqr'."\n".'ygeh6On6aLVslhXZqaqcFCiE+9zq2OtPbOw0HTjWhJAR5zIHu+yaFFKM6W0X+Lrd'."\n".'PJPCGwnYVylEZD9Ta/y+JvITKHbdnr5ezNt8ssxdH49OZqrlDsbvIYk5jEE27DOI'."\n".'MTjLNBfRNOnRpwMyShO0PvSsZaBn55EL96fE3WECgYADbVnOwbxyxK+kmiQtc6K2'."\n".'wri2PXXEu1RKfTx0dbYUaKZDfBdXv591J3LZAs9Hwa5dF6ea/ecsO2prTKfXM3WH'."\n".'J3xGTMBskxSqWAAzrZOITdWCLEZGAkPegHyKBJ4T0U3CNo9zjO6ZB6nmUeLifPlu'."\n".'bRfnqDu8q7peBK+PAPbMEA=='."\n".'-----END PRIVATE KEY-----'."\n".'',
+            'api_public_key' => '-----BEGIN PUBLIC KEY-----'."\n".'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA20gBnPjdgKjOv7+UDidk'."\n".'/1HCkSM9FFS6D+g6wSEeoXnPU7i47IDC80nR0n3mWo7TT/dJXUBDrcBJEL2rV4Al'."\n".'+iIdvCkfQct7Es16OPRuIUl/Cj+MNNWFwjIaG4VGLqr+xMf4dmRY81rbMzX7nvdo'."\n".'XhApf4SExiOyov5OgRH7hAkr3+3oeIeSoqOSf4Z/JT6ThYIvGvCqDb7HL3KZnj81'."\n".'faWcJNxCEpDFM6aSWsVvClFS02I9dJ3bY6kPeBKjyu6c21G+6lHBH1xCxj+iBLXo'."\n".'9VQAPgixeXFpjwQanNn15mLbrha7uYrsvZ/IMISQReHBe1CJ3tVnt3K3bF9s+BoX'."\n".'rQIDAQAB'."\n".'-----END PUBLIC KEY-----'."\n".'',
+            'api_private_key' => '-----BEGIN PRIVATE KEY-----'."\n".'MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDbSAGc+N2AqM6/'."\n".'v5QOJ2T/UcKRIz0UVLoP6DrBIR6hec9TuLjsgMLzSdHSfeZajtNP90ldQEOtwEkQ'."\n".'vatXgCX6Ih28KR9By3sSzXo49G4hSX8KP4w01YXCMhobhUYuqv7Ex/h2ZFjzWtsz'."\n".'Nfue92heECl/hITGI7Ki/k6BEfuECSvf7eh4h5Kio5J/hn8lPpOFgi8a8KoNvscv'."\n".'cpmePzV9pZwk3EISkMUzppJaxW8KUVLTYj10ndtjqQ94EqPK7pzbUb7qUcEfXELG'."\n".'P6IEtej1VAA+CLF5cWmPBBqc2fXmYtuuFru5iuy9n8gwhJBF4cF7UIne1We3crds'."\n".'X2z4GhetAgMBAAECggEBAIb+i0+xvdtpEO7m6CTWh8zO7rMfOIj9qBYG57ThyNOs'."\n".'A8EM5XtjwaC4/11QeLGjX9/I4vdvirq6t8CAo60YjUiyHBAsWLvOoxPuP6I0iGAh'."\n".'uP38JTqZgOEOqxfqMkykpHdMjF+GY2RduLiMMT2qHixaUtHYKU05yM2jNX0sLuUX'."\n".'BCvDhF5iDVDt40KQslU5B7eKNmkkmHyWymaMTI6XmDzeZaRTnMhvGs6aBCgky8Pj'."\n".'PU8BE4PESNz79H5575hGWInHjrxFHsHCL73bgKH1oTXVNZeKtNFbzeub+GbnpBio'."\n".'M8jgnu66pEAMtdJAiDy/zqQsCnIapOkExdGAGXZ3ksECgYEA+k/sSMkG7LkHre/x'."\n".'vIUjaYN7JReq4j99i9mRN0N/drxoGkK3ho0pXSKrthRnt0JJcLOKzvuIwssTw2si'."\n".'rpmHxwzOpgN8RlZ91VlqWwaZZnJ3EwnwPzizQjYVhjgPs3ZDmNwno+nKGIF10zxm'."\n".'xqlcenzbReLGdj8gUNa6dbsjLJkCgYEA4EOTN8qRcG3/nIc7L9nJiNngRVF9H/uJ'."\n".'w0pDsDqQzHhUs6zcqFvLGxOaAPlX0UjOC9xqeE10ZUzn+iuh3JXVIiz6QVi3iW+w'."\n".'SfflvwHt8SKknGmouB/5ALwYFt59NfYqx+vICKAd59mHgpIIBUxRbc0DOiyUMmh2'."\n".'CtHcLMMOPDUCfyv/4IjqzUzPOYpZoySAQrlJY1whzOf4QRlUJTKRqtY0SBhVoe0E'."\n".'40B717Mp4xFTlZU5+ixoCqIzEEZJjs8iLbvPhIOqGS5EBdp63Tci8dQQSt4N4S07'."\n".'ykbZOu9c62WgZEF6cX1emyezmgKHm4lQO/FMAT9HnZsrfYK4PA511rkCgYEAiHlW'."\n".'+5qwSyUFanH5GLOGK1u7WTOv22ite0SUUIgzWdrYYMcPOP0zanTRQUp7oIaXrSwj'."\n".'Nrab4JGekeU/iQc9PqD0YhPlDSQEud671zMLY7TbS7wYyoPaehH87t3SgKYffq4D'."\n".'ewxFZrQ//Lt1WhQJcbJTBnHedZaQTyFKxYql/QkCgYEAppQ2YU9xwXERomAGoMZs'."\n".'bwiMDMFO/pnvALi9ODMYSK6mvwZVY7vZZ2oUw5vOnwCWQP3Y2IrMRnHszomS4U4w'."\n".'NOf/FCgFPX8oLjqTrWYZ5P6VWDxfExEq+XdbatoRgCVL6pIIDP1Z+Gl3iEhM7zyz'."\n".'Y0Bn+CAZV55IsO34m3MfYd0='."\n".'-----END PRIVATE KEY-----'."\n".'',
             'cache.driver' => 'array',
             'cache.adapter' => 'cache.adapter.array',
             'kernel.bundles' => [
@@ -939,27 +1431,27 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
                 46 => 'dashtrends',
                 47 => 'ps_viewedproduct',
                 48 => 'statsregistrations',
-                49 => 'ps_cashondelivery',
-                50 => 'ps_googleanalytics',
-                51 => 'statssearch',
-                52 => 'statssales',
-                53 => 'statsbestcategories',
-                54 => 'gridhtml',
-                55 => 'dashgoals',
-                56 => 'ps_dataprivacy',
-                57 => 'bmsprocurement',
-                58 => 'autoupgrade',
-                59 => 'angarfastconfig',
-                60 => 'angarbanners',
-                61 => 'angarbestsellers',
-                62 => 'angarcmsinfo',
-                63 => 'angarfacebook',
-                64 => 'angarnewproducts',
-                65 => 'angarslider',
-                66 => 'angarspecials',
-                67 => 'angarcontact',
-                68 => 'angarscrolltop',
-                69 => 'angarthemeconfigurator',
+                49 => 'ps_googleanalytics',
+                50 => 'statssearch',
+                51 => 'statssales',
+                52 => 'statsbestcategories',
+                53 => 'gridhtml',
+                54 => 'dashgoals',
+                55 => 'ps_dataprivacy',
+                56 => 'bmsprocurement',
+                57 => 'autoupgrade',
+                58 => 'angarfastconfig',
+                59 => 'angarbanners',
+                60 => 'angarbestsellers',
+                61 => 'angarcmsinfo',
+                62 => 'angarnewproducts',
+                63 => 'angarslider',
+                64 => 'angarspecials',
+                65 => 'angarcontact',
+                66 => 'angarscrolltop',
+                67 => 'angarthemeconfigurator',
+                68 => 'worldlineop',
+                69 => 'alma',
             ],
             'ps_cache_dir' => '/opt/lampp/htdocs/tune4style/var/cache/prod/',
             'mail_themes_uri' => '/mails/themes',

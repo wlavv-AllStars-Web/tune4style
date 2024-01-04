@@ -50,7 +50,7 @@
 
   </div>
 
-  <div class="bottom-footer">
+  <div class="bottom-footer" align="center" style="padding-bottom: 22px;">
       {block name='copyright_link'}
         {l s='%copyright% Copyright %year% %shop_name%. All Rights Reserved.' sprintf=['%shop_name%' => $shop.name|escape:'html':'UTF-8', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
       {/block}

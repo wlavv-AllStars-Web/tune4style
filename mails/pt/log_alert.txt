@@ -2,13 +2,13 @@
 
 {shop_url}
 
-Hi,
+Olá,
 
-New alert message saved
+Nova mensagem de alerta guardada
 
-WARNING: you have received a new log alert in your back office.
+Aviso: recebeu um novo alerta de registo na sua área de administração.
 
-You can check for it in the Advanced Parameters > Logs section of your back office.
+Pode verificar na secção Parâmetros Avançados > Registos na Área de Administração.
 
 [{shop_name}]({shop_url})
 

@@ -17,6 +17,9 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
             'shortName' => [
                 'HookStatus',
             ],
+            'description' => [
+                'DTO used to get necessary informations when request the API about hook status',
+            ],
             'uriVariables' => [
                 [
                     'id' => $o[4],
@@ -48,6 +51,9 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
             ],
             'class' => [
                 2 => 'PrestaShopBundle\\Api\\Resource\\HookStatus',
+            ],
+            'description' => [
+                2 => 'DTO used to get necessary informations when request the API about hook status',
             ],
             'filters' => [
                 2 => [],

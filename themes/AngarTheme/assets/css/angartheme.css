@@ -5574,3 +5574,50 @@ background: #111;
   max-width: 100%!important;
   margin: 10px auto 0;
 }
+.footer-container
+{
+  background: #111;
+}
+.hook_box
+{
+  width: 100%;
+  max-width: 100%;
+  top: -27px;
+  position: relative;
+}
+
+.item_desc{
+  border: 1px solid #272727;
+}
+.play{
+  font-size: 120px;
+  color: #000;
+  margin-top: -77px;
+  padding-top: 10% !important;
+  padding-bottom: 10% !important;
+}
+.play:hover{
+  color: #dc2825;
+}
+.bg-play{
+  height: 33px;
+  background: #fff;
+  width: 43px;
+  margin-top: -77px !important;
+}
+#angarinfo_block{
+  text-align: center;
+  float: left;
+  width: 100%;
+  padding: 30px 0 0!important;
+}
+.footer-container {
+  padding-bottom: 6px;
+}
+.iconees {
+  color:#ffffff;
+    }
+  .iconees:hover {
+    color:#dd170e;
+    transform: scale(1.2);
+      }

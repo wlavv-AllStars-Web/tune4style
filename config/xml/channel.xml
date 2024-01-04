@@ -30,12 +30,12 @@
 		</branch>
 		<branch name="1.7" available="1" >
 			<name>1.7.8 stable</name>
-			<num>1.7.8.10</num>
+			<num>1.7.8.11</num>
 			<download>
-				<link>https://github.com/PrestaShop/PrestaShop/releases/download/1.7.8.10/prestashop_1.7.8.10.zip</link>
-				<md5>d7ad1349e9f5e7e90e79480612d0ce12</md5>
+				<link>https://github.com/PrestaShop/PrestaShop/releases/download/1.7.8.11/prestashop_1.7.8.11.zip</link>
+				<md5>d29d55f89a2c44bef3d5c51b70e3a771</md5>
 			</download>
-			<changelog>https://build.prestashop-project.org/news/2023/prestashop-1-7-8-10-maintenance-release/</changelog>
+			<changelog>https://build.prestashop-project.org/news/2024/prestashop-1-7-8-11-maintenance-release/</changelog>
 		</branch>
 		<branch name="8.0" available="1" >
 			<name>8.0 stable</name>
@@ -48,12 +48,12 @@
 		</branch>
 		<branch name="8.1" available="1" >
 			<name>8.1 stable</name>
-			<num>8.1.2</num>
+			<num>8.1.3</num>
 			<download>
-				<link>https://github.com/PrestaShop/PrestaShop/releases/download/8.1.2/prestashop_8.1.2.zip</link>
-				<md5>c04b1b6dce814145619d77920aca0531</md5>
+				<link>https://github.com/PrestaShop/PrestaShop/releases/download/8.1.3/prestashop_8.1.3.zip</link>
+				<md5>401c741b7584fba3b7137d2344d353f3</md5>
 			</download>
-			<changelog>https://build.prestashop-project.org/news/2023/prestashop-8-1-2-maintenance-release/</changelog>
+			<changelog>https://build.prestashop-project.org/news/2024/prestashop-8-1-3-maintenance-release/</changelog>
 		</branch>
 	</channel>
 	<channel name="rc" available="1" >

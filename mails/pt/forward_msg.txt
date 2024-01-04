@@ -2,15 +2,15 @@
 
 {shop_url}
 
-Hi {firstname} {lastname},
+Olá {firstname} {lastname},
 
-Customer Service - Discussion Forwarded
+Apoio ao Cliente — Mensagem(s) reencaminhada(s)
 
-{employee} wanted to forward this discussion to you.
+{employee} pretende reencaminhar esta(s) mensagem(s) para si.
 
-Discussion history: {messages}
+Histórico da discussão: {messages}
 
-{employee} added {comment}
+{employee} adicionou "{comment}"
 
 [{shop_name}]({shop_url})
 

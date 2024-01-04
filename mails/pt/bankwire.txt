@@ -2,31 +2,31 @@
 
 {shop_url}
 
-Hi {firstname} {lastname},
+Olá {firstname} {lastname},
 
-Thank you for shopping with {shop_name}!
+Obrigado por fazer compras na {shop_name}!
 
-Order ID {order_name} - Pending payment
+Encomenda nº {order_name} - Pagamento pendente
 
-Your order with the reference {order_name} has been placed successfully. You can expect delivery as soon as your payment is received.
+A sua encomenda com a referência {order_name} foi colocada com sucesso. Pode contar com a sua expedição assim que o pagamento seja recebido.
 
-Payment method: bank wire
+Método de pagamento: Transferência Bancária
 
-You have decided to pay by bank wire. Here is the information you need for your transfer:
+Decidiu pagar por transferência bancária. Aqui está a informação que precisa para a sua transferência:
 
-Amount:  {total_paid}
+Quantia:  {total_paid}
 
-Account owner:  {bankwire_owner}
+Titular da conta:  {bankwire_owner}
 
-Account details: {bankwire_details}
+Detalhes da conta: {bankwire_details}
 
-Bank address: {bankwire_address}
+Endereço do banco: {bankwire_address}
 
-Please specify your order reference in the bankwire description.
+Por favor indique a referência da sua encomenda na descrição da transferência bancária.
 
-Follow your order and download your invoice on our store, go to the [Order history and details]({history_url}) section of your customer account.
+Siga a sua encomenda e transfira a sua fatura na nossa loja, vá para a secção [Histórico de encomendas e detalhes]({history_url}) da sua conta de cliente.
 
-If you have a guest account, you can follow your order via the [Guest Tracking]({guest_tracking_url}) section on our shop.
+Se tem uma conta de convidado, pode seguir a sua encomenda na secção [Rastreio de Visitantes]({guest_tracking_url}) na nossa loja.
 
 [{shop_name}]({shop_url})
 

@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).'/vendor/autoload.php';
-require __DIR__.'/ContainerQBSxYjE/appAppKernelProdContainer.php';
+require __DIR__.'/Container9RmVPZU/appAppKernelProdContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -176,8 +176,11 @@ $classes[] = 'PrestaShopBundle\Form\Admin\Sell\Product\Pricing\SpecificPriceType
 $classes[] = 'PrestaShopBundle\Form\Admin\Sell\Product\EventListener\SpecificPriceCombinationListener';
 $classes[] = 'PrestaShopBundle\Form\Admin\Sell\Product\Stock\VirtualProductFileType';
 $classes[] = 'PrestaShopBundle\Form\Admin\Type\AmountCurrencyType';
+$classes[] = 'PrestaShopBundle\Form\Admin\Type\ApeType';
 $classes[] = 'PrestaShopBundle\Form\Admin\Type\FormattedTextareaType';
 $classes[] = 'PrestaShopBundle\Form\Admin\Type\ReorderPositionsButtonType';
+$classes[] = 'PrestaShopBundle\Form\Extension\IntegerTypeExtension';
+$classes[] = 'PrestaShopBundle\Form\Extension\NumberTypeExtension';
 $classes[] = 'PrestaShopBundle\Security\Admin\SessionRenewer';
 $classes[] = 'PrestaShopBundle\Utils\FloatParser';
 $classes[] = 'PrestaShop\Module\BlockWishList\Controller\WishlistConfigurationAdminController';
@@ -405,6 +408,7 @@ $classes[] = 'PrestaShop\PrestaShop\Core\Hook\HookDispatcher';
 $classes[] = 'PrestaShop\PrestaShop\Core\Image\AvifExtensionChecker';
 $classes[] = 'PrestaShop\PrestaShop\Core\Image\ImageFormatConfiguration';
 $classes[] = 'PrestaShop\PrestaShop\Core\Localization\Locale\Repository';
+$classes[] = 'PrestaShop\PrestaShop\Core\Localization\Number\LocaleNumberTransformer';
 $classes[] = 'PrestaShop\PrestaShop\Core\Module\SourceHandler\RemoteZipSourceHandler';
 $classes[] = 'PrestaShop\PrestaShop\Core\Module\SourceHandler\SourceHandlerFactory';
 $classes[] = 'PrestaShop\PrestaShop\Core\Product\Combination\Generator\CombinationGenerator';
@@ -519,6 +523,7 @@ $classes[] = 'ApiPlatform\Symfony\Validator\Metadata\Property\Restriction\Proper
 $classes[] = 'ApiPlatform\Symfony\Validator\Metadata\Property\Restriction\PropertySchemaUniqueRestriction';
 $classes[] = 'ApiPlatform\Metadata\Resource\Factory\CachedResourceMetadataCollectionFactory';
 $classes[] = 'ApiPlatform\Doctrine\Orm\Metadata\Resource\DoctrineOrmResourceCollectionMetadataFactory';
+$classes[] = 'ApiPlatform\Metadata\Resource\Factory\PhpDocResourceMetadataCollectionFactory';
 $classes[] = 'ApiPlatform\Metadata\Resource\Factory\AlternateUriResourceMetadataCollectionFactory';
 $classes[] = 'ApiPlatform\Metadata\Resource\Factory\FiltersResourceMetadataCollectionFactory';
 $classes[] = 'ApiPlatform\Metadata\Resource\Factory\FormatsResourceMetadataCollectionFactory';
@@ -537,6 +542,7 @@ $classes[] = 'ApiPlatform\Core\Metadata\Resource\Factory\FormatsResourceMetadata
 $classes[] = 'ApiPlatform\Core\Metadata\Resource\Factory\OperationResourceMetadataFactory';
 $classes[] = 'ApiPlatform\Core\Metadata\Resource\Factory\AnnotationResourceFilterMetadataFactory';
 $classes[] = 'ApiPlatform\Core\Metadata\Resource\Factory\ShortNameResourceMetadataFactory';
+$classes[] = 'ApiPlatform\Core\Metadata\Resource\Factory\PhpDocResourceMetadataFactory';
 $classes[] = 'ApiPlatform\Core\Metadata\Resource\Factory\InputOutputResourceMetadataFactory';
 $classes[] = 'ApiPlatform\Core\Metadata\Resource\Factory\ExtractorResourceMetadataFactory';
 $classes[] = 'ApiPlatform\Core\Metadata\Resource\Factory\AnnotationResourceMetadataFactory';
@@ -2183,6 +2189,7 @@ $classes[] = 'PrestaShop\Module\ProductComment\Repository\ProductCommentCriterio
 $classes[] = 'PrestaShop\Module\ProductComment\Repository\ProductCommentRepository';
 $classes[] = 'Symfony\Component\PropertyInfo\PropertyInfoCacheExtractor';
 $classes[] = 'Symfony\Component\PropertyInfo\PropertyInfoExtractor';
+$classes[] = 'Symfony\Component\PropertyInfo\Extractor\PhpDocExtractor';
 $classes[] = 'Symfony\Component\PropertyInfo\Extractor\ReflectionExtractor';
 $classes[] = 'Symfony\Component\PropertyInfo\Extractor\SerializerExtractor';
 $classes[] = 'Symfony\Component\HttpFoundation\RequestStack';
@@ -2388,5 +2395,35 @@ $classes[] = 'Symfony\Component\Validator\Constraints\ExpressionValidator';
 $classes[] = 'Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer';
 $classes[] = 'Symfony\Component\Validator\Constraints\NotCompromisedPasswordValidator';
 $classes[] = 'PrestaShopBundle\Form\Validator\Constraints\TinyMceMaxLengthValidator';
+$classes[] = 'WorldlineOP\PrestaShop\Presenter\WebhookEventPresenter';
+$classes[] = 'WorldlineOP\PrestaShop\Presenter\GetPaymentPresenter';
+$classes[] = 'WorldlineOP\PrestaShop\Presenter\GetRefundPresenter';
+$classes[] = 'WorldlineOP\PrestaShop\Installer\Installer';
+$classes[] = 'WorldlineOP\PrestaShop\Logger\LoggerFactory';
+$classes[] = 'WorldlineOP\PrestaShop\Configuration\Loader\SettingsLoader';
+$classes[] = 'Worldlineop';
+$classes[] = 'Module';
+$classes[] = 'WorldlineOP\PrestaShop\Processor\TransactionResponseProcessor';
+$classes[] = 'WorldlineOP\PrestaShop\Repository\TokenRepository';
+$classes[] = 'WorldlineOP\PrestaShop\Repository\TransactionRepository';
+$classes[] = 'WorldlineOP\PrestaShop\Sdk\ClientFactory';
+$classes[] = 'OnlinePayments\Sdk\Communicator';
+$classes[] = 'WorldlineOP\PrestaShop\Sdk\CommunicatorConfigurationFactory';
+$classes[] = 'OnlinePayments\Sdk\DefaultConnection';
+$classes[] = 'WorldlineOP\PrestaShop\OptionsResolver\AccountSettingsResolver';
+$classes[] = 'WorldlineOP\PrestaShop\Configuration\Updater\AccountSettingsUpdater';
+$classes[] = 'WorldlineOP\PrestaShop\Configuration\Validation\AccountValidationData';
+$classes[] = 'WorldlineOP\PrestaShop\OptionsResolver\AdvancedSettingsResolver';
+$classes[] = 'WorldlineOP\PrestaShop\Configuration\Updater\AdvancedSettingsUpdater';
+$classes[] = 'WorldlineOP\PrestaShop\Configuration\Validation\AdvancedSettingsValidationData';
+$classes[] = 'WorldlineOP\PrestaShop\Configuration\Product\GetProductsRequest';
+$classes[] = 'WorldlineOP\PrestaShop\OptionsResolver\PaymentMethodsSettingsResolver';
+$classes[] = 'WorldlineOP\PrestaShop\Configuration\Updater\PaymentMethodsSettingsUpdater';
+$classes[] = 'WorldlineOP\PrestaShop\Configuration\Validation\PaymentMethodsValidationData';
+$classes[] = 'WorldlineOP\PrestaShop\Presenter\ModuleConfigurationPresenter';
+$classes[] = 'WorldlineOP\PrestaShop\Serializer\SettingsSerializer';
+$classes[] = 'WorldlineOP\PrestaShop\Utils\OrderStatusManager';
+$classes[] = 'WorldlineOP\PrestaShop\Utils\TabManager';
+$classes[] = 'WorldlineOP\PrestaShop\Presenter\TransactionPresenter';
 
 Preloader::preload($classes);

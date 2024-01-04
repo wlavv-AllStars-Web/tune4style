@@ -2,17 +2,17 @@
 
 {shop_url}
 
-Hi {firstname} {lastname},
+Olá {firstname} {lastname},
 
-Your message has been sent successfully, thank you for taking the time to write!
+A sua mensagem foi enviada com sucesso, agradecemos o tempo dispendido!
 
-Order ID #:  {order_name}
+N.º da Encomenda #:  {order_name}
 
-Product:  {product_name}
+Produto:  {product_name}
 
-Attached file: {attached_file}
+Ficheiro anexo: {attached_file}
 
-We will reply as soon as possible.
+Responderemos logo que possível.
 
 [{shop_name}]({shop_url})
 
