@@ -10,9 +10,6 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
             'shortName' => [
                 'HookStatus',
             ],
-            'description' => [
-                'DTO used to get necessary informations when request the API about hook status',
-            ],
             'itemOperations' => [
                 [
                     'get' => [

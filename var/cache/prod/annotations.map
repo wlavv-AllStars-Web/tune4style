@@ -213,10 +213,4 @@
   212 => 'Symfony\\Component\\HttpKernel\\Controller\\TraceableArgumentResolver',
   213 => 'Symfony\\Component\\HttpKernel\\Controller\\TraceableControllerResolver',
   214 => 'Symfony\\Component\\Security\\Http\\Controller\\UserValueResolver',
-  215 => 'WorldlineOP\\PrestaShop\\Configuration\\Entity\\AccountSettings',
-  216 => 'WorldlineOP\\PrestaShop\\Configuration\\Entity\\AdvancedSettings',
-  217 => 'WorldlineOP\\PrestaShop\\Configuration\\Entity\\PaymentMethod',
-  218 => 'WorldlineOP\\PrestaShop\\Configuration\\Entity\\PaymentMethodsSettings',
-  219 => 'WorldlineOP\\PrestaShop\\Configuration\\Entity\\PaymentSettings',
-  220 => 'WorldlineOP\\PrestaShop\\Configuration\\Entity\\Settings',
 );

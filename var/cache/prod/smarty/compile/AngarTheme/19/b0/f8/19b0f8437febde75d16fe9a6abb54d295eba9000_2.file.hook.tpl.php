@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-01-04 16:58:36
+/* Smarty version 4.3.4, created on 2024-01-11 11:28:28
   from '/opt/lampp/htdocs/tune4style/modules/angarbanners/views/templates/hook/hook.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_6596e3bc1c1615_58209008',
+  'unifunc' => 'content_659fd0dc779310_49939787',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6596e3bc1c1615_58209008 (Smarty_Internal_Template $_smarty_tpl) {
+function content_659fd0dc779310_49939787 (Smarty_Internal_Template $_smarty_tpl) {
 if ((isset($_smarty_tpl->tpl_vars['htmlitems']->value)) && $_smarty_tpl->tpl_vars['htmlitems']->value) {?>
 <div id="angarbanners_<?php echo htmlspecialchars((string) call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'escape' ][ 0 ], array( $_smarty_tpl->tpl_vars['hook']->value,'htmlall','UTF-8' )), ENT_QUOTES, 'UTF-8');?>
 " class="angarbanners">
