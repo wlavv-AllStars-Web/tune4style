@@ -82,7 +82,12 @@ class AdminWmModuleHomepageController extends AdminController{
     }
 */
     public function postProcess(){
-        
+        $stat = Context::getContext()->link->getAdminLink('AdminModules');
+        $stat  = explode('/', $stat);
+        $dominio = $stat['2'];
+        $back_path = $stat['3'];
+        echo $back_path;
+        exit;
         if(Tools::getValue('action') == 'updateDesktop'){
             
             echo '<pre>' . print_r(Tools::getAllValues(), 1) . '</pre>';

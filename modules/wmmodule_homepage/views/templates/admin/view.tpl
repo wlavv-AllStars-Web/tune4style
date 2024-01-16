@@ -35,7 +35,6 @@
     #select_car_1,#select_car_2,#select_car_3,#select_car_4,#select_car_5,#select_car_6{ display:none; }
 </style>
 
-
 <script>
 
     $("#select_brand_1").on("change",   function () { setModal(1,  1, $(this), 'manufacturer' ) });
